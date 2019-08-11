@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+        }
+        .green::after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            display: inline-block;
+        }
+        .yellow::after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: yellow;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    
+        <div  class="green"
+        style="float:left;width:100px;height: 100px;background-color: red"></div>
+      <script>
+          //方法，通过改变class的名来修改伪元素的值.
+             var div = document.getElementsByTagName('div')[0];
+             div.onclick=function(){
+                 div.className="yellow";
+             }
+            </script>
+</body>
+</html>

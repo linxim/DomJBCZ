@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="float:left;width:100px;height: 100px;background-color: red"></div>
+    <script>
+        //写元素css属性
+        //dom.style.prop
+        //div.style==>CSSStyleDeclaration{...}
+        //div.style.length  ==>(设置属性的个数)
+        //div.style.width="200px"; ==>(间接的改变css属性)
+        //div.style.background-color  ==>在JS里面不能命名没有-
+        //==>div.style.backgroundColor  ==>当遇到-命名统一修改为小驼峰式
+
+        //可读写行间样式,没有兼容性问题,碰到float这样的保留字属性，前面应加css
+        //float==>cssFloat
+        //div.style.float="left";==>div.style.cssFloat="left";
+
+        //复合属性尽量拆开写
+        //div.style.border="2px solid red";
+        //==> div.style.borderWidth="2px";
+        var div = document.getElementsByTagName('div')[0];
+
+    </script>
+</body>
+
+</html>

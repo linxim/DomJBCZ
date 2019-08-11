@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px !important;
+        }
+        div::after{
+            content: "";
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div style="float:left;width:100px;height: 100px;background-color: red"></div>
+
+    <script>
+        //只能读，不能赋值修改
+        //查询计算样式 
+        //创建一个style
+        //window.getComputedStyle(div,null);  //更加准确（如果出现多个重复属性，他会去找优先级最高的那一个）
+        //获取的是当前元素所有css显示的值
+        //window.getComputedStyle(div,null).width ==>200px;(根据优先级的最高的那个)
+        //div.style.width  ==>100px;(行间样式的值不够准确)
+
+        //返回的计算样式的值都是绝对值,没有相对单位
+
+        //IE8及IE8以下不兼容
+        //封装兼容性方法getStyle(elem,prop);
+        //使用方法:getStyle(div,"width");  //查看div下width的值
+        //补充:getComputedStyle(div,null) //第二个值可以去获取(伪元素)唯一方法
+        var div = document.getElementsByTagName('div')[0];
+        window.getComputedStyle(div,"after").width;  //获取伪元素的方法
+        function getStyle(elem, prop) {
+            if (window.getComputedStyle) {
+                return window.getComputedStyle(elem, null)[prop];
+            } else {
+                return elem.currentStyle[prop];
+            }
+        }
+    </script>
+</body>
+
+</html>

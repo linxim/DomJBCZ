@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //查看视口的尺寸
+        //1.window.innerWidth/innerHeight
+        //当ctrl+滑轮放大或缩小页面视口的尺寸也会发生变化
+        //2.document.documentElement.clientWidth/clientHeight
+        //这个适用于标准模式下任意浏览器都兼容
+        //什么是标准模式==>在<html>标签上面<!DOCTYPE html>这个就代表标准模式
+        //如何查看标准模式==>document.compatMode==>CSS1Compat
+        //3.document.body.clientWidth/clientHeight
+        //这个适用于怪异模式
+        //document.compatMode==>BackCompat
+
+        function getViewportOffset(){
+            if(window.innerWidth){
+                return {
+                    w:window.innerWidth,
+                    h:window.innerHeight
+
+                }
+            }else{
+                    if(document.compatMode=="CSS1Compat"){
+                        return{w:document.documentElement.clientWidth,
+                        h:document.documentElement.clientHeight
+                        }
+                    }else{
+                        return{ 
+                             w:document.body.clientWidth,     
+                            h:document.body.clientHeight
+                            }
+                      
+                    }
+            }
+        }
+    </script>
+    <hr style="width: 1000%">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

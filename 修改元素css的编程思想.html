@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .changediv{
+            width: 200px;
+            height: 200px;
+            transition: linear 3s;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+            //效率更高 js-html搭建桥梁==>优化(减少来回次数)
+            //好维护  
+            //动态操作的还是需要通过修改div.style.width来改变
+           var div = document.getElementsByTagName('div')[0];
+           div.onclick=function(){
+               div.className="changediv";
+           }
+    </script>
+</body>
+</html>
